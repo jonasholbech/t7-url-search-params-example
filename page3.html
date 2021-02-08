@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Page 3</h1>
+    <p class="close">Cool, then you'll be home soon</p>
+    <p class="far">Sorry about that, have a nice long trip home</p>
+
+    <p>ADD YOUR QUESTION HERE, AND PICK IT UP ON PAGE 4</p>
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const close = urlParams.get("close");
+      if (close === "yes") {
+        document.querySelector(".far").remove();
+      } else {
+        document.querySelector(".close").remove();
+      }
+    </script>
+  </body>
+</html>

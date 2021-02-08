@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Page 2</h1>
+    <p>OK, glad to hear that you are a <span class="gender"></span></p>
+    <p>Do you live near here?</p>
+    <ul>
+      <li><a href="page3.html?close=yes">Yes</a></li>
+      <li><a href="page3.html?close=no">No</a></li>
+    </ul>
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const gender = urlParams.get("gender");
+      document.querySelector(".gender").textContent = gender;
+    </script>
+  </body>
+</html>
