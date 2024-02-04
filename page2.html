@@ -8,7 +8,7 @@
   </head>
   <body>
     <h1>Page 2</h1>
-    <p>OK, glad to hear that you are a <span class="gender"></span></p>
+    <p>OK, you are <span class="mood"></span></p>
     <p>Do you live near here?</p>
     <ul>
       <li><a href="page3.html?close=yes">Yes</a></li>
@@ -16,8 +16,8 @@
     </ul>
     <script>
       const urlParams = new URLSearchParams(window.location.search);
-      const gender = urlParams.get("gender");
-      document.querySelector(".gender").textContent = gender;
+      const mood = urlParams.get("mood");
+      document.querySelector(".mood").textContent = mood;
     </script>
   </body>
 </html>
